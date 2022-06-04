@@ -409,6 +409,12 @@ ul {
     padding-top: 0px;
 }
 
+@media screen and (max-width: 600px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
 #quiz {
     background-color: #34495E;
     padding-bottom: 60px;
