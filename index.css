@@ -54,7 +54,6 @@ body {
     cursor: pointer;
 }
 .logo {
-    z-index: 1;
     width: 4%;
     float: left;
     user-select: none;
@@ -276,13 +275,7 @@ ul {
 
 @media screen and (max-width: 700px) {
     .logo {
-        width: 7.5%;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .logo {
-        width: 10%;
+        width: 7%;
     }
 
     .intro {
