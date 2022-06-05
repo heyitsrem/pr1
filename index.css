@@ -44,7 +44,9 @@ body {
 .footer_logo {
     user-select: none;
     width: 4%;
+    margin-top: 1%;
     cursor: pointer;
+
 }
 
 .seedlist {
@@ -139,6 +141,16 @@ ul {
 .number-of-trees {
     float:right;
     margin-right: 3%;
+}
+
+.error {
+    color:white;
+    text-decoration: none;
+}
+
+.error:hover {
+    color: #e2e2e2;
+    text-decoration: underline;
 }
 
 .tooltip {
