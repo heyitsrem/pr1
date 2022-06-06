@@ -124,7 +124,7 @@ ul {
 
 .trees-planted {
     margin-top: -3%;
-    margin-right: 2%;
+    margin-right: 5%;
     cursor: pointer;
     user-select: none;
     float:right;
@@ -196,7 +196,6 @@ input[type=submit]:hover {
     border-radius: 5px;
     padding: 20px;
 }
-
 .tooltip {
     position: relative;
     display: inline-block;
@@ -206,10 +205,9 @@ input[type=submit]:hover {
 .tooltip .tooltiptext {
     cursor: default;
     visibility: hidden;
-    width: 150px;
+    width: 200px;
     background-color: white;
     color: #000000;
-    text-align: center;
     padding: 5px 0;
     border-radius: 6px;
 
@@ -218,7 +216,7 @@ input[type=submit]:hover {
     z-index: 1;
     top: 111%;
     left: 40%;
-    margin-left: -60px;
+    margin-left: -90px;
 
     /* Fade in tooltip */
     opacity: 0;
@@ -240,6 +238,7 @@ input[type=submit]:hover {
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
     visibility: visible;
     opacity: 1;
 }
