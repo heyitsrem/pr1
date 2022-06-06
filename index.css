@@ -102,8 +102,12 @@ body {
 
 ul {
     list-style-type: none;
-    margin-left: -4.2%;
     font-size: 18px;
+}
+
+
+.ul {
+    margin-left: -4.2%;
 }
 
 .ul1 {
@@ -284,15 +288,15 @@ input[type=submit]:hover {
 
     .site-footer_column {
         margin-left: 25%;
-        margin-top: -5.3%;
+        margin-top: -7%;
         display: flex;
         flex-direction: column;
         padding-right: 2rem;
     }
 
     .site-footer_column1 {
-        margin-left: 51%;
-        margin-top: -23.6%;
+        margin-left: 50%;
+        margin-top: -23.3%;
         display: flex;
         flex-direction: column;
         padding-right: 2rem;
@@ -308,8 +312,11 @@ input[type=submit]:hover {
 
     ul {
         list-style-type: none;
-        margin-left: -5.88%;
         font-size: 18px;
+    }
+
+    .ul {
+        margin-left: -5.7%;
     }
 
     .ul1 {
@@ -325,7 +332,7 @@ input[type=submit]:hover {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 780px) {
     .logo {
         width: 7%;
     }
@@ -342,16 +349,154 @@ input[type=submit]:hover {
 
     .footer_logo {
         user-select: none;
-        width: 10%;
+        width: 5%;
         cursor: pointer;
     }
 
     .seedlist {
-        margin-top: -7%;
-        margin-left: 10%;
+        margin-top: -4%;
+        margin-left: 5%;
         font-size: 22px;
         cursor: pointer;
     }
+
+    .site-footer {
+        margin-left: -3%;
+
+    }
+
+    .site-footer a {
+        color: currentColor;
+        text-decoration: none;
+    }
+
+    .site-footer_column {
+        margin-left: 25%;
+        margin-top: -8.8%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 2rem;
+    }
+
+    .site-footer_column1 {
+        margin-left: 52%;
+        margin-top: -30.2%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 2rem;
+    }
+
+    .site-footer_column2 {
+        margin-left: 80%;
+        margin-top: -22.2%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 2rem;
+    }
+
+    ul {
+        list-style-type: none;
+        margin-left: -7.2%;
+        font-size: 18px;
+    }
+
+    .ul1 {
+        margin-left: -12%;
+    }
+
+    .ul2 {
+        margin-left: -32%;
+    }
+
+    .site-footer_header {
+        font-size: 22px;
+    }
+
+    .trees-planted {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 426px) {
+    .logo {
+        width: 10%;
+    }
+
+    .intro {
+        margin: auto;
+        width: 90%;
+    }
+
+    .footer {
+        height: 620px;
+    }
+
+    .what-we-do {
+        width: 90%;
+        margin: auto;
+    }
+
+    .footer_logo {
+        user-select: none;
+        width: 10%;
+        cursor: pointer;
+        margin-left: 2%;
+    }
+
+    .seedlist {
+        margin-top: -8%;
+        margin-left: 12%;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .site-footer_column {
+        margin-left: 7%;
+        margin-top: .1%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 2rem;
+    }
+
+    .site-footer_column1 {
+        margin-left: 7%;
+        margin-top: .1%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 2rem;
+    }
+
+    .site-footer_column2 {
+        margin-left: 7%;
+        margin-top: .1%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 2rem;
+    }
+
+    ul {
+        list-style-type: none;
+        margin-left: -10%;
+        font-size: 18px;
+    }
+
+    .ul {
+        margin-left: -10%;
+    }
+
+    .ul1 {
+        margin-left: -10%;
+    }
+
+    .ul2 {
+        margin-left: -10%;
+    }
+
+    .site-footer_header {
+        font-size: 22px;
+    }
+
     .trees-planted {
         display: none;
     }
@@ -422,7 +567,7 @@ input[type=submit]:hover {
     display: block;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .navbar a:not(:first-child), .dropdown .dropbtn {
         display: none;
     }
@@ -432,7 +577,7 @@ input[type=submit]:hover {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .navbar.responsive {position: relative;}
     .navbar.responsive .icon {
         position: absolute;
@@ -461,7 +606,7 @@ input[type=submit]:hover {
     padding-top: 0px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .wrapper {
         width: 90%;
     }
