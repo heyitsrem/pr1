@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="index.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
     <title>SeedList</title>
 </head>
 <body class="body">
@@ -17,7 +18,7 @@
 <img src="img/seedfav.png" class="logo">
 
 <div class="navbar" id="myTopnav">
-    <a href="/pr1" class="active">Home</a>
+    <a href="/pr1">Home</a>
     <a href="download">Download</a>
     <a href="contact-us">Contact</a>
     <a href="/pr1#about">About Us</a>
@@ -51,7 +52,6 @@
 
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
-
 <div class="trees-planted tooltip">
     <img src="img/tree.png" class="tree-img">
     <div class="number-of-trees">
@@ -131,7 +131,6 @@
         </p>
     </div>
 </div>
-</div>
 <footer class="footer">
         <img src="img/seedfav.png" class="footer_logo" onclick="topFunction()" title="Back to top" id="myBtn">
         <p class="seedlist" onclick="topFunction1()" title="Back to top" id="myBtn1">SeedList</p>
@@ -206,6 +205,13 @@
 </footer>
 
 </body>
+
+<script>
+    window.onscroll = () => {
+        const nav = document.querySelector('#navbar');
+        if(this.scrollY <= 10) nav.className = ''; else nav.className = 'scroll';
+    };
+</script>
 
 <script>
     var vid = document.getElementById("video1");

@@ -96,6 +96,12 @@ window.onload = function () {
 
 };
 
+function openNav() {
+    document.getElementById("mySidepanel").style.width = "427px";
+}
 
+function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+}
 
 

@@ -17,7 +17,7 @@
 <img src="img/seedfav.png" class="logo">
 
 <div class="navbar" id="myTopnav">
-    <a href="/pr1" class="active">Home</a>
+    <a href="/pr1">Home</a>
     <a href="download">Download</a>
     <a href="contact-us">Contact</a>
     <a href="/pr1#about">About Us</a>
@@ -51,66 +51,91 @@
 
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
-
-<div class="slideshow-container">
-
-    <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="image1.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
+<div class="banner-image">
+    <div class="txt3">
+        <h1>
+            Plant trees while you play trivia games
+        </h1>
+        <p class="description">
+            We use the profit we make from your searches to plant trees where they are
+            <br>
+            needed most. Get the free browser extension and plant trees with every search.
+        </p>
     </div>
-
-    <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="image2.jpg" style="width:100%">
-        <div class="text">Caption Two</div>
-    </div>
-
-    <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="image2.webp" style="width:100%">
-        <div class="text">Caption Three</div>
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
 </div>
-<br>
-<div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-</div>
+
+<footer class="footer1 footer">
+    <img src="img/seedfav.png" class="footer_logo" onclick="topFunction()" title="Back to top" id="myBtn">
+    <p class="seedlist" onclick="topFunction1()" title="Back to top" id="myBtn1">SeedList</p>
+    <div class="site-footer">
+        <div class="site-footer_column">
+            <div class="site-footer_group">
+                <h3 class="site-footer_header">Resources</h3>
+                <ul class="ul">
+                    <li>
+                        <a href="faq">F.A.Q</a>
+                    </li>
+                    <li>
+                        <a href="https://help.google.com">Help Center</a>
+                    </li>
+                    <li>
+                        <a href="status">Status</a>
+                    </li>
+                    <li>
+                        <a href="calculator">Calculator</a>
+                    </li>
+                    <li>
+                        <a href="quiz-bee">Quiz Bee</a>
+                    </li>
+                    <li>
+                        <a href="privacy">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="terms">Terms and Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="site-footer_column1">
+            <div class="site-footer_group">
+                <h3 class="site-footer_header">Social Media</h3>
+                <ul class="ul1">
+                    <li>
+                        <a href="https://facebook.com">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com">YouTube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="site-footer_column2">
+            <div class="site-footer_group">
+                <h3 class="site-footer_header">Company</h3>
+                <ul class="ul2">
+                    <li>
+                        <a href="careers">Careers</a>
+                    </li>
+                    <li>
+                        <a href="blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/theoremism/seedlist">Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</footer>
 
 </body>
-
-<script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-    }
-</script>
-
 </html>
