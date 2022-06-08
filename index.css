@@ -253,7 +253,7 @@ input[type=submit]:hover {
 }
 
 .banner-image {
-    background-image: url("img/image2 (1).jpg");
+    background-image: url("https://raw.githubusercontent.com/samuelreese/pr1/master/img/image2%20(1).jpg");
     background-color: #cccccc;
     height: 500px;
     width: 100%;
