@@ -253,11 +253,10 @@ input[type=submit]:hover {
 }
 
 .banner-image {
-    background-image: url("img/image2 (1).jpg");
+    background-image: url("https://raw.githubusercontent.com/samuelreese/pr1/master/img/image2%20(1).jpg");
     background-color: #cccccc;
     height: 500px;
     width: 100%;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -283,6 +282,11 @@ input[type=submit]:hover {
     line-height: 0.9;
     text-align: center;
     margin-top: 15%;
+}
+
+.content {
+    margin-top: 45%;
+    user-select: none;
 }
 
 @media screen and (max-width: 1050px) {
@@ -371,6 +375,16 @@ input[type=submit]:hover {
     .site-footer_header {
         font-size: 22px;
     }
+
+    .content {
+        margin-top: 55%;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .content {
+        margin-top: 70%;
+    }
 }
 
 @media screen and (max-width: 780px) {
@@ -456,7 +470,6 @@ input[type=submit]:hover {
     .trees-planted {
         display: none;
     }
-
 }
 
 @media screen and (max-width: 426px) {
@@ -540,6 +553,10 @@ input[type=submit]:hover {
 
     .trees-planted {
         display: none;
+    }
+
+    .content {
+        margin-top: 125%;
     }
 
 }
