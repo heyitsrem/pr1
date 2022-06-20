@@ -14,10 +14,6 @@
     <title>Leaf</title>
 
     <style>
-        
-        body {
-            color:black;
-        }
 
         #main {
         width: 80%;
@@ -26,7 +22,10 @@
         margin: auto;
         padding: 10px;
         background-color: white;
+        color:black;
         border-radius: 10px;
+        user-select: none;
+        text-align: justify;
         }
         
         #header {
@@ -35,12 +34,20 @@
         padding: 5px;
         height: 250px;
         background: beige;
-        background-image: url("code.jpg");
-        color: black;
+        background-image: url("img/image1.webp");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        user-select: none;
         }
 
         label {
+        cursor: pointer;
         display: block;
+        }
+
+        label:hover {
+            color:rgba(32, 32, 32, 0.777)
         }
 
         input {
@@ -48,9 +55,22 @@
         margin-left: 20px;
         }
 
-        button {
+        .test {
         width: 100px;
+        height: 50px;
         margin-top: 20px;
+        background-color: bisque;
+        color:black;
+        border: solid;
+        cursor: pointer;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        }
+
+        .test:hover {
+        background-color: rgb(238, 212, 181);
         }
         </style>
 </head>
@@ -68,7 +88,7 @@
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="quizz-bee-2.html">Quiz Bee 2</a>
+            <a href="quizz-bee-2.html">Causes of Climate Change</a>
             <a href="quiz-bee.html">Quiz Bee</a>
         </div>
     </div>
@@ -95,80 +115,76 @@
 </div>
 
 <div id="main">
-    <div id="header">
-    <h1>JavaScript Quiz</h1>
-    </div>
-    <form id="form1">
-    
-    <h2>Which is the best description of a variable?</h2>
-    <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />Identifies a portion of a string.</label>
-    <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />A method to join strings.</label>
-    <label for="var_info"><input type="radio" name="variable" value="25" id="var_info" />Allows you to store information so it can be reused throughout the program</label>
-    <label for="var_condition"><input type="radio" name="variable" value="0" id="var_condition"/>Allows you to make a decision based on a condition.</label>
-    
-    <h2>Which is the best description of the substring method?</h2>
-    <label for="sub_string"><input type="radio" name="sub" value="25" id="sub_string"/>Identifies a portion of a string.</label>
-    <label for="sub_join"><input type="radio" name="sub" value="0" id="sub_join"/>A method to join strings.</label>
-    <label for="sub_info"><input type="radio" name="sub" value="0" id="sub_info" />Allows you to store information so it can be reused throughout the program</label>
-    <label for="sub_condition"><input type="radio" name="sub" value="0" id="sub_condition" />Allows you to make a decision based on a condition.</label>
-    
-    <h2>Which is the best description of concatenation?</h2>
-    <label for="cat_string"><input type="radio" name="con" value="0" id="cat_string" />Identifies a portion of a string.</label>
-    <label for="cat_join"><input type="radio" name="con" value="25" id="cat_join" />A method to join strings.</label>
-    <label for="cat_info"><input type="radio" name="con" value="0" id="cat_info" />Allows you to store information so it can be reused throughout the program</label>
-    <label for="cat_condition"><input type="radio" name="con" value="0" id="cat_condition" />Allows you to make a decision based on a condition.</label>
-    
-    <h2>Which is the best description of an if statement?</h2>
-    <label for="if_string"><input type="radio" name="ifstate" value="0" id="if_string" />Identifies a portion of a string.</label>
-    <label for="if_join"><input type="radio" name="ifstate" value="0" id="if_join" />A method to join strings.</label>
-    <label for="if_info"><input type="radio" name="ifstate" value="0" id="if_info" />Allows you to store information so it can be reused throughout the program</label>
-    <label for="if_condition"><input type="radio" name="ifstate"  value="25" id="if_condition" />Allows you to make a decision based on a condition.</label>
-    
-    <button type="submit" value="Submit">Submit</button>
-    
-    </form>
-    
-    <p>Your grade is: <span id="grade">__</span></p>
-    <p id="grade2"></p>
-    
-    
-    
-    <script>
-    document.getElementById("form1").onsubmit=function() {
-           variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
-           sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
-           con = parseInt(document.querySelector('input[name = "con"]:checked').value);
-           ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
-    
-    
-           result = variable + sub + con + ifstate;
-    
-        document.getElementById("grade").innerHTML = result;
-    
-     grading = [
-           {score:0,feedback:"I don't think you studied", image: "none.jpg"},
-           {score:25,feedback:"You need to spend more time. Try again", image: "poor.jpg"},
-           {score:50,feedback:"I think you could do better. Try again.", image: "avg.jpg"},
-           {score:75,feedback:"So close. Try again.", image: "above.jpg"},
-           {score:100,feedback:"Excellent! You're a JavaScript pro!", image: "excellent.jpg"}
-           ];
-    
-    for(i=0; i<grading.length; i++) {
-        if(result == grading[i].score) {
-        result2 = grading[i].feedback + "<br /><img src='" + grading[i].image + "' width='300'  />";
-          }
-          }
-    
-    
-    document.getElementById("grade2").innerHTML = result2;
-    
-    return false; // required to not refresh the page; just leave this here
-    } //this ends the submit function
-    
-    </script>
-    
-    
-    </div>
+<div id="header">
+<h1>Causes of Climate Change</h1>
+</div>
+<form id="form1">
+
+<h2>Generating electricity and heat by burning fossil fuels such as coal, oil and natural gas causes a large chunk of global emissions. Most electricity is still produced from fossil fuels; only about a quarter comes from wind, solar and other renewable sources.</h2>
+<label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />Cutting down forests.</label>
+<label for="var_join"><input type="radio" name="variable" value="25" id="var_join" />Generating power</label>
+<label for="var_info"><input type="radio" name="variable" value="0" id="var_info" />Manufacturing goods</label>
+
+<h2>Manufacturing and industry produce emissions, mostly from burning fossil fuels to produce energy for making things like cement, iron, steel, electronics, plastics, clothes and other goods. Mining and other industrial processes also release gases.</h2>
+<label for="sub_string"><input type="radio" name="sub" value="0" id="sub_string"/>Cutting down forests</label>
+<label for="sub_join"><input type="radio" name="sub" value="0" id="sub_join"/>Generating power</label>
+<label for="sub_info"><input type="radio" name="sub" value="25" id="sub_info" />Manufacturing goods</label>
+
+<h2>Cutting down forests to create farms or pastures, or for other reasons, causes emissions, since trees, when they are cut, release the carbon they have been storing. Since forests absorb carbon dioxide, destroying them also limits nature/’s ability to keep emissions out of the atmosphere.</h2>
+<label for="cat_string"><input type="radio" name="con" value="25" id="cat_string" />Cutting down forests</label>
+<label for="cat_info"><input type="radio" name="con" value="0" id="cat_info" />Generating power</label>
+<label for="cat_condition"><input type="radio" name="con" value="0" id="cat_condition" />Using transportation</label>
+
+<h2>Most cars, lorries, ships and planes run on fossil fuels. That makes transportation a major contributor of greenhouse gases, especially carbon-dioxide emissions. Road vehicles account for the largest part, but emissions from ships and planes continue to grow.</h2>
+<label for="if_string"><input type="radio" name="ifstate" value="0" id="if_string" />Manufacturing goods</label>
+<label for="if_join"><input type="radio" name="ifstate" value="25" id="if_join" />Using transportation</label>
+<label for="if_info"><input type="radio" name="ifstate" value="0" id="if_info" />Cutting down forests</label>
+
+<button class="test" type="submit" value="Submit">Submit</button>
+
+</form>
+
+<p>Your grade is: <span id="grade">__</span></p>
+<p id="grade2"></p>
+
+
+
+<script>
+document.getElementById("form1").onsubmit=function() {
+       variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+	   sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+	   con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+	   ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+
+
+	   result = variable + sub + con + ifstate;
+
+	document.getElementById("grade").innerHTML = result;
+
+ grading = [
+	   {score:0,feedback:" I don't think you studied", image: "none.jpg"},
+	   {score:25,feedback:" You need to spend more time. Try again", image: "poor.jpg"},
+	   {score:50,feedback:" I think you could do better. Try again.", image: "img/gold_star.png"},
+	   {score:75,feedback:" So close. Try again.", image: "img/runner-up.png"},
+	   {score:100,feedback:" Excellent! You're a JavaScript pro!", image: "img/1st.png"}
+	   ];
+
+for(i=0; i<grading.length; i++) {
+    if(result == grading[i].score) {
+    result2 = "<img src='" + grading[i].image + "' width='50' style='vertical-align:middle; user-select: none;'/>" + grading[i].feedback;
+	  }
+	  }
+
+
+document.getElementById("grade2").innerHTML = result2;
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+</script>
+
+
+</div>
 
 <!--<footer class="footer">
         <img src="img/seedfav.png" class="footer_logo" onclick="topFunction()" title="Back to top" id="myBtn">
