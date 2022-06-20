@@ -12,6 +12,47 @@
     <script src="index.js"></script>
     <script src="jquery-3.6.0.min.js"></script>
     <title>Leaf</title>
+
+    <style>
+        
+        body {
+            color:black;
+        }
+
+        #main {
+        width: 80%;
+        max-width: 950px;
+        border: 1px gray solid;
+        margin: auto;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+        }
+        
+        #header {
+        margin-top: 0;
+        border: 2px solid black;
+        padding: 5px;
+        height: 250px;
+        background: beige;
+        background-image: url("code.jpg");
+        color: black;
+        }
+
+        label {
+        display: block;
+        }
+
+        input {
+        width: 30px;
+        margin-left: 20px;
+        }
+
+        button {
+        width: 100px;
+        margin-top: 20px;
+        }
+        </style>
 </head>
 <body class="body">
 
@@ -52,86 +93,84 @@
 
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
-<div class="trees-planted tooltip">
-    <img src="img/tree.png" class="tree-img">
-    <div class="number-of-trees">
-        <p class="number">100,000</p>
-    </div>
-    <div class="tooltiptext">
-        <p style="margin-left: 5%">This is the number of seeds you
-         can plant with SeedList. The more you use our work – the more trees
-        we plant. Sign in to keep
-        track of your usage
-        across devices.</p>
-        <a href="learn-more" style="margin: 5%; color:rgba(0,0,0,0.5); text-decoration: underline">Learn more</a>
-        <hr>
-        <a href="sign-in" style="float:left; margin-left: 5%; color:black;">Sign In</a>
 
+<div id="main">
+    <div id="header">
+    <h1>JavaScript Quiz</h1>
     </div>
-</div>
+    <form id="form1">
+    
+    <h2>Which is the best description of a variable?</h2>
+    <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />Identifies a portion of a string.</label>
+    <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />A method to join strings.</label>
+    <label for="var_info"><input type="radio" name="variable" value="25" id="var_info" />Allows you to store information so it can be reused throughout the program</label>
+    <label for="var_condition"><input type="radio" name="variable" value="0" id="var_condition"/>Allows you to make a decision based on a condition.</label>
+    
+    <h2>Which is the best description of the substring method?</h2>
+    <label for="sub_string"><input type="radio" name="sub" value="25" id="sub_string"/>Identifies a portion of a string.</label>
+    <label for="sub_join"><input type="radio" name="sub" value="0" id="sub_join"/>A method to join strings.</label>
+    <label for="sub_info"><input type="radio" name="sub" value="0" id="sub_info" />Allows you to store information so it can be reused throughout the program</label>
+    <label for="sub_condition"><input type="radio" name="sub" value="0" id="sub_condition" />Allows you to make a decision based on a condition.</label>
+    
+    <h2>Which is the best description of concatenation?</h2>
+    <label for="cat_string"><input type="radio" name="con" value="0" id="cat_string" />Identifies a portion of a string.</label>
+    <label for="cat_join"><input type="radio" name="con" value="25" id="cat_join" />A method to join strings.</label>
+    <label for="cat_info"><input type="radio" name="con" value="0" id="cat_info" />Allows you to store information so it can be reused throughout the program</label>
+    <label for="cat_condition"><input type="radio" name="con" value="0" id="cat_condition" />Allows you to make a decision based on a condition.</label>
+    
+    <h2>Which is the best description of an if statement?</h2>
+    <label for="if_string"><input type="radio" name="ifstate" value="0" id="if_string" />Identifies a portion of a string.</label>
+    <label for="if_join"><input type="radio" name="ifstate" value="0" id="if_join" />A method to join strings.</label>
+    <label for="if_info"><input type="radio" name="ifstate" value="0" id="if_info" />Allows you to store information so it can be reused throughout the program</label>
+    <label for="if_condition"><input type="radio" name="ifstate"  value="25" id="if_condition" />Allows you to make a decision based on a condition.</label>
+    
+    <button type="submit" value="Submit">Submit</button>
+    
+    </form>
+    
+    <p>Your grade is: <span id="grade">__</span></p>
+    <p id="grade2"></p>
+    
+    
+    
+    <script>
+    document.getElementById("form1").onsubmit=function() {
+           variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+           sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+           con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+           ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+    
+    
+           result = variable + sub + con + ifstate;
+    
+        document.getElementById("grade").innerHTML = result;
+    
+     grading = [
+           {score:0,feedback:"I don't think you studied", image: "none.jpg"},
+           {score:25,feedback:"You need to spend more time. Try again", image: "poor.jpg"},
+           {score:50,feedback:"I think you could do better. Try again.", image: "avg.jpg"},
+           {score:75,feedback:"So close. Try again.", image: "above.jpg"},
+           {score:100,feedback:"Excellent! You're a JavaScript pro!", image: "excellent.jpg"}
+           ];
+    
+    for(i=0; i<grading.length; i++) {
+        if(result == grading[i].score) {
+        result2 = grading[i].feedback + "<br /><img src='" + grading[i].image + "' width='300'  />";
+          }
+          }
+    
+    
+    document.getElementById("grade2").innerHTML = result2;
+    
+    return false; // required to not refresh the page; just leave this here
+    } //this ends the submit function
+    
+    </script>
+    
+    
+    </div>
 
-<div class="intro">
-    <h1 class="intro_txt1">What is Climate Change?</h1>
-    <div class="parag1">
-        <p>
-            Ever since the 1800's Climate Change has already affected us. Climate change impacts us in
-            a global scope and unprecedented in scale. Climate change also affects us through food
-            production, shifting weather patters, and to rising sea levels that increase the risk of
-            catastrophic flooding.
-        </p>
-        <p>
-            Climate change refers to long-term shifts in temperatures and weather patterns. These
-            shifts may be natural, such as through variations in the solar cycle. But since the 1800s,
-            human activities have been the main driver of climate change, primarily due to burning
-            fossil fuels like coal, oil and gas.
-        </p>
-        <p>
-            More frequent and intense drought, storms, heat waves, rising sea levels, melting glaciers
-            and warming oceans can directly harm animals, destroy the places they live, and wreak
-            havoc on people's livelihoods and communities.
-        </p>
-        <video id="video1" width="100%" controls>
-            <source src="videos/video1.mp4" type="video/mp4">
-            <source src="videos/video1.mp4" type="video/ogg">
-        </video>
-        <small class="credit">
-            Credit: <a href="https://sciencemoms.com">sciencemoms.com</a>
-        </small>
-    </div>
-</div>
-
-    <div class="what-we-do" id="about">
-    <h1 class="txt1">
-        About Us
-    </h1>
-    <div class="parag1">
-        <p>
-            We created a mobile website to assist people in managing their time while at
-            the same time helping our habitat to be a better place.This website focuses
-            on time management and organizing the user's task.
-        </p>
-        <p>
-            With each list they put a check on, the website will automatically give them a
-            reward of seed, which can be used to plant virtual trees that will eventually
-            grow. While planting these seeds, a tree in the real world will also be planted.
-            And for every 10 tasks that are completed, the user will gain a star, this star can
-            be used to donate to charities, shelters, disaster reliefs, researches, and etc.
-            Daily login streak, each time they login, they get more seeds to plant. Once
-            you’ve planted a seed, it will move you to another section, where you can
-            customize your background, your pot, and what type of plant to plant, there you
-            can also water your plant and watch it grow over time.
-        </p>
-        <p>
-            Not only will the users strengthen their ability to manage their time, but it also
-            benefits the overall situation of our climate crisis. Users can interact in our web
-            by completing the tasks made by the user itself and can customize the design
-            of their UI according to their personal preferences. The web ensures that every
-            commission that users achieve, it’ll provide a certain reward and will also track
-            the complete information of their accomplished activities.
-        </p>
-    </div>
-</div>
-<footer class="footer">
+<!--<footer class="footer">
         <img src="img/seedfav.png" class="footer_logo" onclick="topFunction()" title="Back to top" id="myBtn">
         <p class="seedlist" onclick="topFunction1()" title="Back to top" id="myBtn1">SeedList</p>
     <div class="site-footer">
@@ -202,7 +241,7 @@
         </div>
 
     </div>
-</footer>
+</footer>-->
 
 </body>
 
