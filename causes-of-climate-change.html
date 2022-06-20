@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/seedfav.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>Leaf</title>
+
+    <style>
+
+        #main {
+        width: 80%;
+        max-width: 950px;
+        border: 1px gray solid;
+        margin: auto;
+        padding: 10px;
+        background-color: white;
+        color:black;
+        border-radius: 10px;
+        user-select: none;
+        text-align: justify;
+        }
+        
+        #header {
+        margin-top: 0;
+        border: 2px solid black;
+        padding: 5px;
+        height: 250px;
+        background: beige;
+        background-image: url("img/image1.webp");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        user-select: none;
+        }
+
+        label {
+        cursor: pointer;
+        display: block;
+        }
+
+        label:hover {
+            color:rgba(32, 32, 32, 0.777)
+        }
+
+        input {
+        width: 30px;
+        margin-left: 20px;
+        }
+
+        .test {
+        width: 100px;
+        height: 50px;
+        margin-top: 20px;
+        background-color: bisque;
+        color:black;
+        border: solid;
+        cursor: pointer;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        }
+
+        .test:hover {
+        background-color: rgb(238, 212, 181);
+        }
+        </style>
+</head>
+<body class="body">
+
+<img src="img/seedfav.png" class="logo">
+
+<div class="navbar" id="myTopnav">
+    <a href="/pr1">Home</a>
+    <a href="download">Download</a>
+    <a href="contact-us">Contact</a>
+    <a href="/pr1#about">About Us</a>
+    <div class="dropdown">
+        <button class="dropbtn">Our Work
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="quizz-bee-2.html">Causes of Climate Change</a>
+            <a href="quiz-bee.html">Quiz Bee</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">More
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="how">How SeedList works</a>
+            <a href="https://help.google.com/">Help</a>
+            <a href="login">Log In</a>
+            <a href="signup">Create account</a>
+            <hr>
+            <a href="gift">Gift seeds</a>
+            <a href="store">Store</a>
+            <a href="blog">Blog</a>
+            <a href="careers">Careers</a>
+
+        </div>
+    </div>
+
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div id="main">
+<div id="header">
+<h1>Causes of Climate Change</h1>
+</div>
+<form id="form1">
+
+<h2>Generating electricity and heat by burning fossil fuels such as coal, oil and natural gas causes a large chunk of global emissions. Most electricity is still produced from fossil fuels; only about a quarter comes from wind, solar and other renewable sources.</h2>
+<label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />Cutting down forests.</label>
+<label for="var_join"><input type="radio" name="variable" value="25" id="var_join" />Generating power</label>
+<label for="var_info"><input type="radio" name="variable" value="0" id="var_info" />Manufacturing goods</label>
+
+<h2>Manufacturing and industry produce emissions, mostly from burning fossil fuels to produce energy for making things like cement, iron, steel, electronics, plastics, clothes and other goods. Mining and other industrial processes also release gases.</h2>
+<label for="sub_string"><input type="radio" name="sub" value="0" id="sub_string"/>Cutting down forests</label>
+<label for="sub_join"><input type="radio" name="sub" value="0" id="sub_join"/>Generating power</label>
+<label for="sub_info"><input type="radio" name="sub" value="25" id="sub_info" />Manufacturing goods</label>
+
+<h2>Cutting down forests to create farms or pastures, or for other reasons, causes emissions, since trees, when they are cut, release the carbon they have been storing. Since forests absorb carbon dioxide, destroying them also limits nature/’s ability to keep emissions out of the atmosphere.</h2>
+<label for="cat_string"><input type="radio" name="con" value="25" id="cat_string" />Cutting down forests</label>
+<label for="cat_info"><input type="radio" name="con" value="0" id="cat_info" />Generating power</label>
+<label for="cat_condition"><input type="radio" name="con" value="0" id="cat_condition" />Using transportation</label>
+
+<h2>Most cars, lorries, ships and planes run on fossil fuels. That makes transportation a major contributor of greenhouse gases, especially carbon-dioxide emissions. Road vehicles account for the largest part, but emissions from ships and planes continue to grow.</h2>
+<label for="if_string"><input type="radio" name="ifstate" value="0" id="if_string" />Manufacturing goods</label>
+<label for="if_join"><input type="radio" name="ifstate" value="25" id="if_join" />Using transportation</label>
+<label for="if_info"><input type="radio" name="ifstate" value="0" id="if_info" />Cutting down forests</label>
+
+<button class="test" type="submit" value="Submit">Submit</button>
+
+</form>
+
+<p>Your grade is: <span id="grade">__</span></p>
+<p id="grade2"></p>
+
+
+
+<script>
+document.getElementById("form1").onsubmit=function() {
+       variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+	   sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+	   con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+	   ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+
+
+	   result = variable + sub + con + ifstate;
+
+	document.getElementById("grade").innerHTML = result;
+
+ grading = [
+	   {score:0,feedback:" I don't think you studied", image: "none.jpg"},
+	   {score:25,feedback:" You need to spend more time. Try again", image: "poor.jpg"},
+	   {score:50,feedback:" I think you could do better. Try again.", image: "img/gold_star.png"},
+	   {score:75,feedback:" So close. Try again.", image: "img/runner-up.png"},
+	   {score:100,feedback:" Excellent! You're a JavaScript pro!", image: "img/1st.png"}
+	   ];
+
+for(i=0; i<grading.length; i++) {
+    if(result == grading[i].score) {
+    result2 = "<img src='" + grading[i].image + "' width='50' style='vertical-align:middle; user-select: none;'/>" + grading[i].feedback;
+	  }
+	  }
+
+
+document.getElementById("grade2").innerHTML = result2;
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <img src="img/seedfav.png" class="footer_logo" onclick="topFunction()" title="Back to top" id="myBtn">
+        <p class="seedlist" onclick="topFunction1()" title="Back to top" id="myBtn1">SeedList</p>
+    <div class="site-footer">
+        <div class="site-footer_column">
+            <div class="site-footer_group">
+                <h3 class="site-footer_header">Resources</h3>
+                <ul class="ul">
+                    <li>
+                        <a href="faq">F.A.Q</a>
+                    </li>
+                    <li>
+                        <a href="https://help.google.com">Help Center</a>
+                    </li>
+                    <li>
+                        <a href="status">Status</a>
+                    </li>
+                    <li>
+                        <a href="calculator">Calculator</a>
+                    </li>
+                    <li>
+                        <a href="quiz-bee">Quiz Bee</a>
+                    </li>
+                    <li>
+                        <a href="privacy">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="terms">Terms and Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="site-footer_column1">
+            <div class="site-footer_group">
+                <h3 class="site-footer_header">Social Media</h3>
+                <ul class="ul1">
+                    <li>
+                        <a href="https://facebook.com">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com">YouTube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="site-footer_column2">
+            <div class="site-footer_group">
+                <h3 class="site-footer_header">Company</h3>
+                <ul class="ul2">
+                    <li>
+                        <a href="careers">Careers</a>
+                    </li>
+                    <li>
+                        <a href="blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/theoremism/seedlist">Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+
+<script>
+    window.onscroll = () => {
+        const nav = document.querySelector('#navbar');
+        if(this.scrollY <= 10) nav.className = ''; else nav.className = 'scroll';
+    };
+</script>
+
+<script>
+    var vid = document.getElementById("video1");
+    vid.volume = 0.10;
+</script>
+
+<script>
+    //Get the button:
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+
+<script>
+    //Get the button:
+    mybutton = document.getElementById("myBtn1");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction1() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+
+</html>
