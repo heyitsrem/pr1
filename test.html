@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/seedfav.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>Leaf</title>
+
+    <style>
+        .menu {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        padding: 0;
+        outline: none;
+        }
+        .line {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 6;
+        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+            stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .line1 {
+        stroke-dasharray: 60 207;
+        stroke-width: 6;
+        }
+        .line2 {
+        stroke-dasharray: 60 60;
+        stroke-width: 6;
+        }
+        .line3 {
+        stroke-dasharray: 60 207;
+        stroke-width: 6;
+        }
+        .opened .line1 {
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 6;
+        }
+        .opened .line2 {
+        stroke-dasharray: 1 60;
+        stroke-dashoffset: -30;
+        stroke-width: 6;
+        }
+        .opened .line3 {
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 6;
+        }
+    </style>
+</head>
+<body class="body">
+
+<img src="img/seedfav.png" class="logo">
+
+<div class="navbar" id="myTopnav">
+    <a href="/pr1">Home</a>
+    <a href="contact-us">Contact</a>
+    <a href="/pr1#about">About Us</a>
+    <a href="learn-more">Learn More</a>
+    <div class="dropdown">
+        <button class="dropbtn">Our Work
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="causes-of-climate-change">Causes of Climate Change</a>
+            <a href="how-to-reduce">How to reduce Climate Change</a>
+            <a href="effects-of-climate-change">Effects of Climate Change</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">More
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="how">How SeedList works</a>
+            <a href="https://help.google.com/">Help</a>
+            <a href="login">Log In</a>
+            <a href="signup">Create account</a>
+            <hr>
+            <a href="gift">Gift seeds</a>
+            <a href="store">Store</a>
+            <a href="blog">Blog</a>
+            <a href="careers">Careers</a>
+
+        </div>
+    </div>
+
+    <a class="menu icon" onclick="myFunction();this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+        <svg width="30" height="30" viewBox="0 0 100 100">
+          <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+          <path class="line line2" d="M 20,50 H 80" />
+          <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+    </a>
+
+</div>
+<div class="trees-planted tooltip">
+    <img src="img/tree.png" class="tree-img">
+    <div class="number-of-trees">
+        <p class="number">100,000</p>
+    </div>
+    <div class="tooltiptext">
+        <p style="margin-left: 5%">This is the number of seeds you
+         can plant with SeedList. The more you use our work – the more trees
+        we plant. Sign in to keep
+        track of your usage
+        across devices.</p>
+        <a href="learn-more" style="margin: 5%; color:rgba(0,0,0,0.5); text-decoration: underline">Learn more</a>
+        <hr>
+        <a href="sign-in" style="float:left; margin-left: 5%; color:black;">Sign In</a>
+
+    </div>
+</div>
+
+<div class="intro">
+    <h1 class="intro_txt1">What is Climate Change?</h1>
+    <div class="parag1">
+        <p>
+            Ever since the 1800's Climate Change has already affected us. Climate change impacts us in
+            a global scope and unprecedented in scale. Climate change also affects us through food
+            production, shifting weather patters, and to rising sea levels that increase the risk of
+            catastrophic flooding.
+        </p>
+        <p>
+            Climate change refers to long-term shifts in temperatures and weather patterns. These
+            shifts may be natural, such as through variations in the solar cycle. But since the 1800s,
+            human activities have been the main driver of climate change, primarily due to burning
+            fossil fuels like coal, oil and gas.
+        </p>
+        <p>
+            More frequent and intense drought, storms, heat waves, rising sea levels, melting glaciers
+            and warming oceans can directly harm animals, destroy the places they live, and wreak
+            havoc on people's livelihoods and communities.
+        </p>
+        <video id="video1" width="100%" controls>
+            <source src="videos/video1.mp4" type="video/mp4">
+            <source src="videos/video1.mp4" type="video/ogg">
+        </video>
+        <small class="credit">
+            Credit: <a href="https://sciencemoms.com">sciencemoms.com</a>
+        </small>
+    </div>
+</div>
+
+    <div class="what-we-do" id="about">
+    <h1 class="txt1">
+        About Us
+    </h1>
+    <div class="parag1">
+        <p>
+            Climate change is a long-term shift in a place's temperature and typical weather 
+            patterns. Climate change can refer to a specific place or the entire world. 
+            Weather patterns may become less predictable as a result of climate change. 
+            Because projected temperature and rainfall levels can no longer be relied upon, 
+            these unpredictable weather patterns might make it difficult to maintain and 
+            develop crops in farming-dependent regions. Other harmful weather 
+            occurrences linked to climate change include more frequent and intense 
+            hurricanes, floods, downpours, and winter storms.  
+
+        </p>
+        <p>
+            The LEAF:WA System showcases Data and Information on The Causes and 
+            Effects of Climate change on our planet and also a minigame questionnaire. The 
+            website creates awareness among users about why climate change is a 
+            problematic issue and how we can address it.
+        </p>
+        <p>
+            Users can interact with our website by reading information and completing 
+            questions. Our website ensures that for every question that users achieve, it’ll 
+            provide a certain reward and will also track the complete information of their 
+            accomplished questions. Users can also customize the design of their UI 
+            according to their personal preferences.
+        </p>
+        <p>
+            As a team, we feel that the implications that our planet is currently 
+            experiencing, ranging from catastrophic disasters to living on the verge of 
+            extinction, are serious. Our website encourages visitors to think about how to 
+            mitigate the effects of climate change and how to avoid it altogether.
+        </p>
+    </div>
+</div>
+
+
+
+<footer class="footer">
+        <img src="img/seedfav.png" class="footer_logo" onclick="topFunction()" title="Back to top" id="myBtn">
+        <p class="seedlist" onclick="topFunction1()" title="Back to top" id="myBtn1">Leaf</p>
+    <div class="site-footer">
+        <div class="site-footer_column">
+            <div class="site-footer_group">
+                <h3 class="site-footer_header">Resources</h3>
+                <ul class="ul">
+                    <li>
+                        <a href="faq">F.A.Q</a>
+                    </li>
+                    <li>
+                        <a href="https://help.google.com">Help Center</a>
+                    </li>
+                    <li>
+                        <a href="status">Status</a>
+                    </li>
+                    <li>
+                        <a href="learn-more">Learn More</a>
+                    </li>
+                    <li>
+                        <a href="#">Our Work</a>
+                    </li>
+                    <li>
+                        <a href="privacy">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="terms">Terms and Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="site-footer_column1">
+            <div class="site-footer_group">
+                <h3 class="site-footer_header">Social Media</h3>
+                <ul class="ul1">
+                    <li>
+                        <a href="https://facebook.com">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com">YouTube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="site-footer_column2">
+            <div class="site-footer_group">
+                <h3 class="site-footer_header">Company</h3>
+                <ul class="ul2">
+                    <li>
+                        <a href="careers">Careers</a>
+                    </li>
+                    <li>
+                        <a href="blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/theoremism/seedlist">Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+
+<script>
+    window.onscroll = () => {
+        const nav = document.querySelector('#navbar');
+        if(this.scrollY <= 10) nav.className = ''; else nav.className = 'scroll';
+    };
+</script>
+
+<script>
+    var vid = document.getElementById("video1");
+    vid.volume = 0.10;
+</script>
+
+<script>
+    //Get the button:
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+
+<script>
+    //Get the button:
+    mybutton = document.getElementById("myBtn1");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction1() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+
+</html>
