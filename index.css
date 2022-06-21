@@ -294,7 +294,45 @@ input[type=submit]:hover {
 
 .content {
     margin-top: 45%;
-    user-select: none;
+}
+
+.cocc {
+    margin-left: 5%;
+    width: 35%;
+    text-align: justify;
+}
+
+.cocc-image {
+    background-image: url("img/cocc.png");
+    background-color: #cccccc;
+    height: 490px;
+    width: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-left: 50%;
+    margin-top: -11.35%;
+}
+
+.image2 {
+    background-image: url("img/gp.png");
+    background-color: #cccccc;
+    height: 490px;
+    width: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-left: 10.72%;
+    margin-top: -0.01;
+}
+
+.cocc1 {
+    float:right;
+    margin-right: 10.7%;
+    width: 35%;
+    text-align: right;
 }
 
 @media screen and (max-width: 1050px) {
