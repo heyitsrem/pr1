@@ -15,7 +15,7 @@
     <title>Leaf</title>
 
     <style> 
-        #panel, #flip {
+        #panel, #flip, #flip1, #panel1, #flip2, #panel2, #flip3, #panel3, #flip4, #panel4 {
             margin: auto;
             padding: 5px;
             width: 50%;
@@ -27,7 +27,7 @@
             cursor: pointer;
         }
         
-        #panel {
+        #panel, #panel1, #panel2, #panel3, #panel4 {
             width: 47.7%;
             padding: 20px;
             display: none;
@@ -180,6 +180,14 @@
 <div id="panel">The heat of the sun is trapped as greenhouse gas emissions blanket the Earth. As a result, global warming and 
     climate change occur. The Earth is currently warming at a rate unprecedented in recorded history.
 </div>
+<p></p>
+<div id="flip1" onclick="downFunction1()" style="user-select: none;">Generating power <span id="myDIV1" style="float:right;"><i class="fa-solid fa-angle-down"></i></span></div>
+<div id="panel1">Generating electricity and heat by burning fossil fuels such as coal, oil and natural gas causes a large chunk of global emissions. Most electricity is still produced from fossil fuels; only about a quarter comes from wind, solar and other renewable sources.
+</div>
+<p></p>
+<div id="flip2" onclick="downFunction2()" style="user-select: none;">Manufacturing goods <span id="myDIV2" style="float:right;"><i class="fa-solid fa-angle-down"></i></span></div>
+<div id="panel2">Manufacturing and industry produce emissions, mostly from burning fossil fuels to produce energy for making things like cement, iron, steel, electronics, plastics, clothes and other goods. Mining and other industrial processes also release gases.
+</div>
 
 <footer class="footer">
         <img src="img/seedfav.png" class="footer_logo" onclick="topFunction()" title="Back to top" id="myBtn">
@@ -318,6 +326,27 @@
         $("#panel").slideToggle("slow");
       });
     });
+
+    $(document).ready(function(){
+      $("#flip1").click(function(){
+        $("#panel1").slideToggle("slow");
+      });
+    });
+    $(document).ready(function(){
+      $("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+      });
+    });
+    $(document).ready(function(){
+      $("#flip3").click(function(){
+        $("#panel3").slideToggle("slow");
+      });
+    });
+    $(document).ready(function(){
+      $("#flip4").click(function(){
+        $("#panel4").slideToggle("slow");
+      });
+    });
     </script>
 
 <script>
@@ -329,6 +358,41 @@
         x.innerHTML = `<i class="fa-solid fa-angle-up"></i>`;
       }
     }
-    </script>
 
+    function downFunction1() {
+      var x = document.getElementById("myDIV1");
+      if (x.innerHTML === `<i class="fa-solid fa-angle-up"></i>`) {
+        x.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+      } else {
+        x.innerHTML = `<i class="fa-solid fa-angle-up"></i>`;
+      }
+    }
+    function downFunction2() {
+      var x = document.getElementById("myDIV2");
+      if (x.innerHTML === `<i class="fa-solid fa-angle-up"></i>`) {
+        x.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+      } else {
+        x.innerHTML = `<i class="fa-solid fa-angle-up"></i>`;
+      }
+    }
+    
+    function downFunction3() {
+      var x = document.getElementById("myDIV3");
+      if (x.innerHTML === `<i class="fa-solid fa-angle-up"></i>`) {
+        x.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+      } else {
+        x.innerHTML = `<i class="fa-solid fa-angle-up"></i>`;
+      }
+    }
+    
+    function downFunction4() {
+      var x = document.getElementById("myDIV4");
+      if (x.innerHTML === `<i class="fa-solid fa-angle-up"></i>`) {
+        x.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+      } else {
+        x.innerHTML = `<i class="fa-solid fa-angle-up"></i>`;
+      }
+    }
+    
+    </script>
 </html>
