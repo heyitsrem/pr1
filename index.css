@@ -9,6 +9,14 @@ body {
     font-family: 'Barlow Condensed', sans-serif;
 }
 
+img.emoji {
+    height: 1.2em;
+    width: 1.2em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: middle;
+    user-select: none;
+}
+
 ::selection {
     background-color: rgba(95, 156, 252, 0.6);
 }
@@ -469,6 +477,62 @@ input[type=submit]:hover {
 
     .trees-planted {
         display: none;
+    }
+}
+
+@media screen and (max-width: 601px) {
+    .footer {
+        height: 635px;
+    }
+
+    .footer_logo {
+        user-select: none;
+        width: 10%;
+        cursor: pointer;
+        margin-left: 2%;
+    }
+
+    .seedlist {
+        margin-top: -8%;
+        margin-left: 12%;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .site-footer_column {
+        margin-left: 7%;
+        margin-top: .2%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 2rem;
+    }
+
+    .site-footer_column1 {
+        margin-left: 7%;
+        margin-top: .1%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 2rem;
+    }
+
+    .site-footer_column2 {
+        margin-left: 7%;
+        margin-top: .1%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 2rem;
+    }
+
+    .ul {
+        margin-left: -7.7%;
+    }
+
+    .ul1 {
+        margin-left: -7.7%;
+    }
+
+    .ul2 {
+        margin-left: -7.7%;
     }
 }
 

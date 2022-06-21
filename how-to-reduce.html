@@ -11,15 +11,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="index.js"></script>
     <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://twemoji.maxcdn.com/v/14.0.2/twemoji.min.js" integrity="sha384-32KMvAMS4DUBcQtHG6fzADguo/tpN1Nh6BAJa2QqZc6/i0K+YPQE+bWiqBRAWuFs" crossorigin="anonymous"></script>
     <title>Leaf</title>
 
     <style>
 
         #main {
-        width: 80%;
+        width: 50%;
         max-width: 950px;
         border: 1px gray solid;
-        margin: auto;
+        margin-left: 5%;
         padding: 10px;
         background-color: white;
         color:black;
@@ -73,6 +74,40 @@
         .test:hover {
         background-color: rgb(238, 212, 181);
         }
+
+        .side {
+    text-align: justify;
+    width: 30%;
+    float:right;
+    margin-right: 5%;
+    border:solid;
+    border-radius: 10px;
+    }
+
+    .side-txt {
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    @media screen and (max-width:600px) {
+        #main {
+            margin: auto;
+            margin-top: 40%;
+            width: 90%;
+        }
+
+        .side {
+            margin-top: 10%;
+            margin-right: 3.2%;
+            width: 92.9%;
+        }
+    }
+
+    @media screen and (max-width: 430px) {
+        #main {
+            margin-top: 50%;
+        }
+    }
         </style>
 </head>
 <body class="body">
@@ -116,9 +151,16 @@
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
+<div class="side">
+    <div class="side-txt">
+        <h1>❓ About this quiz</h1>
+        <p>This quiz aims to share awareness on how you can be apart of taking action towards climate change.</p>
+    </div>
+</div>
+
 <div id="main">
 <div id="header">
-<h1>Causes of Climate Change</h1>
+<h1>Taking actions in Climate Change</h1>
 </div>
 <form id="form1">
 
@@ -333,6 +375,10 @@ return false; // required to not refresh the page; just leave this here
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
+</script>
+
+<script>
+    twemoji.parse(document.body)
 </script>
 
 </html>
