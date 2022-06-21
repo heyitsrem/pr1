@@ -7,8 +7,6 @@ function myFunction() {
     }
 }
 
-
-
 window.onload = function () {
 
     var questionArea = document.getElementsByClassName('questions')[0],

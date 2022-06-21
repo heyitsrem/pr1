@@ -10,8 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="index.js"></script>
-    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f214b79948.js" crossorigin="anonymous"></script>
     <title>Leaf</title>
+
+    <style> 
+        #panel, #flip {
+            margin: auto;
+            padding: 5px;
+            width: 50%;
+            text-align: justify;
+            background-color: rgba(255, 255, 255, 1);
+            backdrop-filter: blur(5px);
+            border: solid 1px #c3c3c3;
+            color:black;
+            cursor: pointer;
+        }
+        
+        #panel {
+            width: 47.7%;
+            padding: 20px;
+            display: none;
+            cursor: auto;
+        }
+
+        @media screen and (max-width: 600px) {
+            #panel, #flip {
+                width: 90%;
+            }
+
+            #panel {
+                width: 85%
+            }
+        }
+        </style>
 </head>
 <body class="body">
 
@@ -19,7 +51,6 @@
 
 <div class="navbar" id="myTopnav">
     <a href="/pr1">Home</a>
-    <a href="download">Download</a>
     <a href="contact-us">Contact</a>
     <a href="/pr1#about">About Us</a>
     <div class="dropdown">
@@ -107,31 +138,49 @@
     </h1>
     <div class="parag1">
         <p>
-            We created a mobile website to assist people in managing their time while at
-            the same time helping our habitat to be a better place.This website focuses
-            on time management and organizing the user's task.
+            Climate change is a long-term shift in a place's temperature and typical weather 
+            patterns. Climate change can refer to a specific place or the entire world. 
+            Weather patterns may become less predictable as a result of climate change. 
+            Because projected temperature and rainfall levels can no longer be relied upon, 
+            these unpredictable weather patterns might make it difficult to maintain and 
+            develop crops in farming-dependent regions. Other harmful weather 
+            occurrences linked to climate change include more frequent and intense 
+            hurricanes, floods, downpours, and winter storms.  
+
         </p>
         <p>
-            With each list they put a check on, the website will automatically give them a
-            reward of seed, which can be used to plant virtual trees that will eventually
-            grow. While planting these seeds, a tree in the real world will also be planted.
-            And for every 10 tasks that are completed, the user will gain a star, this star can
-            be used to donate to charities, shelters, disaster reliefs, researches, and etc.
-            Daily login streak, each time they login, they get more seeds to plant. Once
-            you’ve planted a seed, it will move you to another section, where you can
-            customize your background, your pot, and what type of plant to plant, there you
-            can also water your plant and watch it grow over time.
+            The LEAF:WA System showcases Data and Information on The Causes and 
+            Effects of Climate change on our planet and also a minigame questionnaire. The 
+            website creates awareness among users about why climate change is a 
+            problematic issue and how we can address it.
         </p>
         <p>
-            Not only will the users strengthen their ability to manage their time, but it also
-            benefits the overall situation of our climate crisis. Users can interact in our web
-            by completing the tasks made by the user itself and can customize the design
-            of their UI according to their personal preferences. The web ensures that every
-            commission that users achieve, it’ll provide a certain reward and will also track
-            the complete information of their accomplished activities.
+            Users can interact with our website by reading information and completing 
+            questions. Our website ensures that for every question that users achieve, it’ll 
+            provide a certain reward and will also track the complete information of their 
+            accomplished questions. Users can also customize the design of their UI 
+            according to their personal preferences.
+        </p>
+        <p>
+            As a team, we feel that the implications that our planet is currently 
+            experiencing, ranging from catastrophic disasters to living on the verge of 
+            extinction, are serious. Our website encourages visitors to think about how to 
+            mitigate the effects of climate change and how to avoid it altogether.
         </p>
     </div>
 </div>
+
+<div class="what-we-do" id="about">
+    <h1 class="txt1">
+        Learn More
+    </h1>
+    </div>
+
+<div id="flip" onclick="downFunction()" style="user-select: none;">Causes of Climate Change <span id="myDIV" style="float:right;"><i class="fa-solid fa-angle-down"></i></span></div>
+<div id="panel">The heat of the sun is trapped as greenhouse gas emissions blanket the Earth. As a result, global warming and 
+    climate change occur. The Earth is currently warming at a rate unprecedented in recorded history.
+</div>
+
 <footer class="footer">
         <img src="img/seedfav.png" class="footer_logo" onclick="topFunction()" title="Back to top" id="myBtn">
         <p class="seedlist" onclick="topFunction1()" title="Back to top" id="myBtn1">SeedList</p>
@@ -262,5 +311,24 @@
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 </script>
+
+<script> 
+    $(document).ready(function(){
+      $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+      });
+    });
+    </script>
+
+<script>
+    function downFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.innerHTML === `<i class="fa-solid fa-angle-up"></i>`) {
+        x.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+      } else {
+        x.innerHTML = `<i class="fa-solid fa-angle-up"></i>`;
+      }
+    }
+    </script>
 
 </html>
