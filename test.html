@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="index.js"></script>
-    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f214b79948.js" crossorigin="anonymous"></script>
     <title>Leaf</title>
 
     <style>
@@ -56,6 +57,15 @@
         stroke-dashoffset: -134;
         stroke-width: 6;
         }
+
+        #panel, #flip, #panel1, #flip1 {
+        text-align: center;
+        }
+
+        #panel, #panel1 {
+        display: none;
+        }
+
     </style>
 </head>
 <body class="body">
@@ -67,22 +77,22 @@
     <a href="contact-us">Contact</a>
     <a href="/pr1#about">About Us</a>
     <a href="learn-more">Learn More</a>
-    <div class="dropdown">
-        <button class="dropbtn">Our Work
-            <i class="fa fa-caret-down"></i>
+    <div class="dropdown" id="flip">
+        <button class="dropbtn"><div id="myDIV1" onclick="swapFunction1()">Our Work <i class="fa-solid fa-angle-down"></i></div></button>
+
         </button>
-        <div class="dropdown-content">
+        <div class="dropdown-content" id="panel">
             <a href="causes-of-climate-change">Causes of Climate Change</a>
             <a href="how-to-reduce">How to reduce Climate Change</a>
             <a href="effects-of-climate-change">Effects of Climate Change</a>
         </div>
     </div>
 
-    <div class="dropdown">
-        <button class="dropbtn">More
-            <i class="fa fa-caret-down"></i>
+    <div class="dropdown" id="flip1">
+        <button class="dropbtn"><div id="myDIV" onclick="swapFunction()">More <i class="fa-solid fa-angle-down"></i></div>
+            
         </button>
-        <div class="dropdown-content">
+        <div class="dropdown-content" id="panel1">
             <a href="how">How SeedList works</a>
             <a href="https://help.google.com/">Help</a>
             <a href="login">Log In</a>
@@ -257,7 +267,7 @@
                         <a href="blog">Blog</a>
                     </li>
                     <li>
-                        <a href="https://github.com/theoremism/seedlist">Github</a>
+                        <a href="https://github.com/samuelreese/pr1">Github</a>
                     </li>
                 </ul>
             </div>
@@ -321,6 +331,42 @@
     function topFunction1() {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+
+<script>
+    $(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+
+$(document).ready(function(){
+  $("#flip1").click(function(){
+    $("#panel1").slideToggle("slow");
+  });
+});
+</script>
+
+<script>
+    function swapFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.innerHTML === 'More <i class="fa-solid fa-angle-down"></i>') {
+        x.innerHTML = 'More <i class="fa-solid fa-angle-up"></i>';
+      } else {
+        x.innerHTML = 'More <i class="fa-solid fa-angle-down"></i>';
+      }
+    }
+</script>
+
+<script>
+        function swapFunction1() {
+      var x = document.getElementById("myDIV1");
+      if (x.innerHTML === 'Our Work <i class="fa-solid fa-angle-down"></i>') {
+        x.innerHTML = 'Our Work <i class="fa-solid fa-angle-up"></i>';
+      } else {
+        x.innerHTML = 'Our Work <i class="fa-solid fa-angle-down"></i>';
+      }
     }
 </script>
 

@@ -1073,7 +1073,8 @@ input[type=submit]:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
     z-index: 1;
@@ -1081,15 +1082,20 @@ input[type=submit]:hover {
 
 .dropdown-content a {
     float: none;
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgba(0, 0, 0, 0.69);
+/* .navbar a:hover,*/ .dropdown:hover .dropbtn {  
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
     color: white;
 }
 
